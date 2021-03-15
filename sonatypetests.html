@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+    <body>
+    <script src="sonatypetakehomefunctions.js"></script>
+    <script>
+
+    let testcases = [
+	[303032312, "Three hundred three million thirty two thousand three hundred and twelve"],
+	[42, "Forty two"],
+	[12, "Twelve"], 
+	[5, "Five"],
+	[3+2, "Five"],
+	[151, "One hundred and fifty one"],
+	[10000000040, "Ten billion and forty"],
+	[Number.MAX_SAFE_INTEGER, "Nine quadrillion seven trillion one hundred ninety nine billion two hundred fifty four million seven hundred forty thousand nine hundred and ninety one"], 
+	[Number.MAX_SAFE_INTEGER + 1, "Error: Input value too large; please input a number between 9007199254740991 and -9007199254740991"],
+	[-137700, "Negative one hundred thirty seven thousand seven hundred"],
+	["fubar", "Error: Input value is not an integer"],
+	["328983", "Three hundred twenty eight thousand nine hundred and eighty three"],
+	[3829.21, "Error: Input value is not an integer"],
+	[-151, "Negative one hundred and fifty one"],
+	[0, "Zero"],
+	[-38193, "Negative thirty eight thousand one hundred and ninety three"]
+    ]
+
+
+    //code for testing find_word_equivalent
+    testcases.forEach(function(testcase) {
+        console.assert(find_word_equivalent(testcase[0]) == testcase[1], "Test failed for " + testcase[0] + "\nOutput was " + find_word_equivalent(testcase[0]) + "\nExpected: " + testcase[1]);
+    });
+
+
+	</script>
+	</body>
+</html>
+
